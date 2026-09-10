@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side One Track One</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<main class="game">
+    <header>
+        <h1>SIDE ONE<br>TRACK ONE</h1>
+        <p class="tagline">Name the opening track.</p>
+    </header>
+
+    <section class="card">
+        <div class="label">ALBUM</div>
+        <h2 id="album">Loading…</h2>
+        <div id="artist" class="artist"></div>
+        <div id="year" class="year"></div>
+
+        <form id="answer-form">
+            <label for="answer">SIDE ONE · TRACK ONE</label>
+            <input
+                id="answer"
+                type="text"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="Track title"
+            >
+            <button type="submit">SUBMIT</button>
+        </form>
+
+        <div id="result" class="result"></div>
+
+        <button id="next" class="next hidden">
+            NEXT ALBUM
+        </button>
+    </section>
+
+    <footer>
+        <span id="score">0 correct</span>
+    </footer>
+</main>
+
+<script src="data/albums.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

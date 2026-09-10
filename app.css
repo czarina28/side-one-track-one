@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #111;
+    color: #eee8dc;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.game {
+    width: min(680px, 92vw);
+    padding: 55px 0;
+}
+
+header {
+    border-bottom: 5px solid #eee8dc;
+    padding-bottom: 24px;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(54px, 11vw, 90px);
+    line-height: .82;
+    letter-spacing: -4px;
+}
+
+.tagline {
+    margin: 20px 0 0;
+    font-size: 18px;
+    color: #aaa;
+}
+
+.card {
+    padding: 45px 0;
+}
+
+.label,
+form label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+h2 {
+    font-size: clamp(34px, 7vw, 55px);
+    line-height: 1;
+    margin: 12px 0;
+}
+
+.artist {
+    font-size: 23px;
+}
+
+.year {
+    color: #999;
+    margin-top: 5px;
+}
+
+form {
+    margin-top: 45px;
+}
+
+input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 18px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #777;
+    color: #eee8dc;
+    font-size: 25px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #eee8dc;
+}
+
+button {
+    margin-top: 20px;
+    padding: 15px 24px;
+    border: 0;
+    background: #eee8dc;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.result {
+    min-height: 32px;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+.correct {
+    font-weight: bold;
+}
+
+.wrong {
+    color: #bbb;
+}
+
+.next {
+    background: transparent;
+    border: 1px solid #eee8dc;
+    color: #eee8dc;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    color: #888;
+    font-size: 13px;
+}
+.choices {
+    display: grid;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.choice {
+    width: 100%;
+    margin: 0;
+    padding: 17px 20px;
+    background: transparent;
+    color: #eee8dc;
+    border: 1px solid #666;
+    text-align: left;
+    font-size: 17px;
+    letter-spacing: 0;
+}
+
+.choice:hover:not(:disabled) {
+    border-color: #eee8dc;
+    background: #222;
+}
+
+.choice:disabled {
+    cursor: default;
+}
+
+.choice-correct {
+    background: #eee8dc;
+    color: #111;
+    border-color: #eee8dc;
+}
+
+.choice-wrong {
+    text-decoration: line-through;
+    opacity: .55;
+}
