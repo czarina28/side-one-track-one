@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Side One Track One</title>
     <link rel="stylesheet" href="app.css">
 </head>
@@ -10,37 +10,28 @@
 
 <main class="game">
     <header>
-        <h1>SIDE ONE<br>TRACK ONE</h1>
+        <h1>SIDE ONE<br><span>TRACK ONE</span></h1>
         <p class="tagline">Name the opening track.</p>
     </header>
 
     <section class="card">
         <div class="label">ALBUM</div>
         <h2 id="album">Loading…</h2>
-        <div id="artist" class="artist"></div>
-        <div id="year" class="year"></div>
+        <div class="album-meta">
+            <span id="artist" class="artist"></span>
+            <span id="year" class="year"></span>
+        </div>
 
-        <form id="answer-form">
-            <label for="answer">SIDE ONE · TRACK ONE</label>
-            <input
-                id="answer"
-                type="text"
-                autocomplete="off"
-                spellcheck="false"
-                placeholder="Track title"
-            >
-            <button type="submit">SUBMIT</button>
-        </form>
+        <div class="question-label">SIDE ONE · TRACK ONE</div>
+        <div id="choices" class="choices"></div>
 
-        <div id="result" class="result"></div>
+        <div id="result" class="result" aria-live="polite"></div>
 
-        <button id="next" class="next hidden">
-            NEXT ALBUM
-        </button>
+        <button id="next" class="next hidden" type="button">NEXT ALBUM ›</button>
     </section>
 
     <footer>
-        <span id="score">0 correct</span>
+        <span id="score">0 / 0</span>
     </footer>
 </main>
 
