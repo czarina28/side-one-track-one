@@ -16,7 +16,7 @@
         <p class="tagline">How well do you know your records?</p>
     </header>
 
-    <section class="card">
+    <section id="game-card" class="card">
         <div id="round-label" class="label">ALBUM</div>
         <h2 id="album">Loading…</h2>
         <div class="album-meta">
@@ -39,6 +39,14 @@
         <div id="result" class="result" aria-live="polite"></div>
 
         <button id="next" class="next hidden" type="button">NEXT ALBUM ›</button>
+    </section>
+
+    <section id="game-over" class="game-over hidden" aria-live="polite">
+        <div class="game-over-label">THAT'S FOUR MISSES</div>
+        <h2>GAME OVER</h2>
+        <div id="final-score" class="final-score">0</div>
+        <div class="final-score-label">POINTS</div>
+        <button id="new-game" class="new-game" type="button">NEW GAME ›</button>
     </section>
 
 </main>
