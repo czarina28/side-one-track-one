@@ -5,6 +5,7 @@ let rounds = 0;
 let albumDeck = [];
 let misses = 0;
 let gameOver = false;
+let currentOddTrack = null;
 const MAX_MISSES = 4;
 
 const albumTitle = document.getElementById("album");
@@ -25,10 +26,10 @@ function shuffle(array) {
 }
 
 function cleanTrackPool(album) {
-    const correct = album.opening_track;
     const tracks = album.tracks.filter(track => {
-        if (!track || track === correct) return false;
+        if (!track) return false;
         const lower = track.toLowerCase();
+        if (lower.includes("documentary")) return false;
         if (lower.includes("remix")) return false;
         if (lower.includes("demo")) return false;
         if (lower.includes("live")) return false;
@@ -42,29 +43,24 @@ function cleanTrackPool(album) {
 }
 
 function getChoices(album) {
-    const correct = album.opening_track;
-    const pool = cleanTrackPool(album);
-    const wrong = shuffle(pool).slice(0, 3);
+    const albumTracks = cleanTrackPool(album);
+    const onAlbum = shuffle(albumTracks).slice(0, 3);
+    const albumTrackNames = new Set(album.tracks.map(track => track.toLowerCase()));
 
-    if (wrong.length < 3) {
-        const fallback = [];
-        for (const otherAlbum of ALBUMS) {
-            if (otherAlbum === album) continue;
-            for (const track of otherAlbum.tracks) {
-                if (track && track !== correct && !wrong.includes(track)) {
-                    fallback.push(track);
-                }
-            }
-        }
+    // Prefer a song by the same artist from a different album. If the pool has
+    // only one album by that artist, use a clean track from another record.
+    const sameArtist = ALBUMS.filter(other =>
+        other !== album && other.artist === album.artist
+    );
+    const otherAlbums = sameArtist.length
+        ? sameArtist
+        : ALBUMS.filter(other => other !== album);
+    const outsiderPool = otherAlbums.flatMap(cleanTrackPool).filter(track =>
+        !albumTrackNames.has(track.toLowerCase()) && !onAlbum.includes(track)
+    );
 
-        const extras = shuffle(fallback);
-        while (wrong.length < 3 && extras.length) {
-            const candidate = extras.pop();
-            if (!wrong.includes(candidate)) wrong.push(candidate);
-        }
-    }
-
-    return shuffle([correct, ...wrong]);
+    currentOddTrack = shuffle([...new Set(outsiderPool)])[0];
+    return shuffle([...onAlbum, currentOddTrack]);
 }
 
 function renderChoices(album) {
@@ -86,7 +82,7 @@ function chooseAnswer(selectedButton) {
     rounds++;
 
     const selectedTrack = selectedButton.dataset.track;
-    const correctTrack = currentAlbum.opening_track;
+    const correctTrack = currentOddTrack;
     const buttons = choicesContainer.querySelectorAll(".choice");
 
     buttons.forEach(button => {
@@ -98,12 +94,12 @@ function chooseAnswer(selectedButton) {
 
     if (selectedTrack === correctTrack) {
         score++;
-        result.textContent = "CORRECT";
+        result.textContent = `CORRECT · ${correctTrack} WASN'T ON IT`;
     } else {
         score--;
         misses++;
         selectedButton.classList.add("choice-wrong");
-        result.textContent = `SIDE ONE, TRACK ONE: ${correctTrack}`;
+        result.textContent = `NOT ON THE ALBUM: ${correctTrack}`;
     }
 
     updateScore();
