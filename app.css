@@ -153,6 +153,11 @@ h2 {
     text-decoration: line-through;
 }
 
+.timeline-selected {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
 .result {
     min-height: 20px;
     margin-top: 10px;
