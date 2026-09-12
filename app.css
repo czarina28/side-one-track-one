@@ -4,6 +4,7 @@
     --muted: #9b9992;
     --line: #55534e;
     --orange: #e87532;
+    --blue: #78cbd1;
     --panel: #181816;
 }
 
@@ -107,8 +108,8 @@ h2 {
 .question-label {
     margin-top: 25px;
     margin-bottom: 9px;
-    color: var(--orange);
-    font-size: 12px;
+    color: var(--blue);
+    font-size: 13px;
     font-weight: 900;
     letter-spacing: 1.6px;
 }
