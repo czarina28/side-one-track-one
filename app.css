@@ -244,6 +244,56 @@ h2 {
     text-align: right;
 }
 
+.game-over {
+    padding: 54px 0 0;
+    text-align: center;
+}
+
+.game-over-label,
+.final-score-label {
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.game-over h2 {
+    margin: 10px 0 24px;
+    color: var(--orange);
+    font-size: clamp(42px, 12vw, 68px);
+    letter-spacing: -2px;
+}
+
+.final-score {
+    color: var(--cream);
+    font-size: clamp(72px, 22vw, 120px);
+    font-weight: 900;
+    line-height: .9;
+}
+
+.final-score-label {
+    margin-top: 12px;
+}
+
+.new-game {
+    margin-top: 38px;
+    padding: 13px 18px;
+    border: 1px solid var(--orange);
+    background: transparent;
+    color: var(--orange);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.new-game:hover,
+.new-game:focus-visible {
+    background: var(--orange);
+    color: #111;
+    outline: none;
+}
+
 @media (max-width: 430px) {
     .ios-header-spacer {
         height: max(28px, env(safe-area-inset-top));
