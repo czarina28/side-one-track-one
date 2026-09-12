@@ -328,7 +328,7 @@ function renderTimelineRound() {
     }
 
     roundLabel.textContent = "ALBUM TIMELINE";
-    questionLabel.textContent = "TAP EARLIEST TO LATEST";
+    questionLabel.innerHTML = 'TAP <span class="question-emphasis">EARLIEST</span> TO <span class="question-emphasis">LATEST</span>';
     albumTitle.textContent = "PUT THEM IN ORDER";
     artistDisplay.textContent = "";
     yearDisplay.textContent = "";
