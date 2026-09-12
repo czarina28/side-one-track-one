@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-PROJECT = Path(r"C:\Users\maria\side-one-track-one")
+PROJECT = Path(__file__).resolve().parents[1]
 
 SOURCE = PROJECT / "data" / "album-tracklists.json"
 OUTPUT = PROJECT / "data" / "albums-clean.json"
@@ -47,10 +47,23 @@ for album in albums:
     key = f"{album['artist']}|{album['album']}"
 
     # Clean track titles throughout the album.
-    album["tracks"] = [
-        TITLE_REPLACEMENTS.get(track, track)
-        for track in album["tracks"]
-    ]
+    cleaned_tracks = []
+    seen_tracks = set()
+
+    for track in album["tracks"]:
+        track = TITLE_REPLACEMENTS.get(track, track)
+        normalized = track.casefold().strip()
+
+        if normalized in {"credits", "[data track]"}:
+            continue
+
+        if normalized in seen_tracks:
+            continue
+
+        seen_tracks.add(normalized)
+        cleaned_tracks.append(track)
+
+    album["tracks"] = cleaned_tracks
 
     # Explicitly store the canonical answer separately.
     if key in OPENING_OVERRIDES:
