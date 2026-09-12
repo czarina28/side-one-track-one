@@ -345,7 +345,14 @@ function renderOpeningTrackRound() {
         albumDeck = shuffle(ALBUMS);
     }
 
-    currentAlbum = albumDeck.pop();
+    do {
+        if (albumDeck.length === 0) {
+            albumDeck = shuffle(ALBUMS);
+        }
+
+        currentAlbum = albumDeck.pop();
+    } while (cleanTrackPool(currentAlbum).length < 4);
+
     roundLabel.textContent = "SIDE ONE · TRACK ONE";
     questionLabel.innerHTML = 'WHICH SONG <span class="question-emphasis">OPENS</span> THE ALBUM?';
     albumTitle.textContent = currentAlbum.album;
