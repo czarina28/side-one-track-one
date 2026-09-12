@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-PROJECT = Path(r"C:\Users\maria\side-one-track-one")
+PROJECT = Path(__file__).resolve().parents[1]
 
 SOURCE = PROJECT / "data" / "albums-clean.json"
 OUTPUT = PROJECT / "data" / "albums.js"
