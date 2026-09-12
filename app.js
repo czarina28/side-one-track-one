@@ -6,6 +6,7 @@ let albumDeck = [];
 let misses = 0;
 let gameOver = false;
 let currentOddTrack = null;
+let currentOddAlbum = null;
 const MAX_MISSES = 4;
 
 const albumTitle = document.getElementById("album");
@@ -55,12 +56,21 @@ function getChoices(album) {
     const otherAlbums = sameArtist.length
         ? sameArtist
         : ALBUMS.filter(other => other !== album);
-    const outsiderPool = otherAlbums.flatMap(cleanTrackPool).filter(track =>
-        !albumTrackNames.has(track.toLowerCase()) && !onAlbum.includes(track)
+    const outsiderPool = otherAlbums.flatMap(other =>
+        cleanTrackPool(other).map(track => ({ track, album: other }))
+    ).filter(candidate =>
+        !albumTrackNames.has(candidate.track.toLowerCase()) &&
+        !onAlbum.includes(candidate.track)
     );
 
-    currentOddTrack = shuffle([...new Set(outsiderPool)])[0];
+    const outsider = shuffle(outsiderPool)[0];
+    currentOddTrack = outsider.track;
+    currentOddAlbum = outsider.album;
     return shuffle([...onAlbum, currentOddTrack]);
+}
+
+function outsiderReveal() {
+    return `${currentOddTrack} · FROM ${currentOddAlbum.album} BY ${currentOddAlbum.artist}`;
 }
 
 function renderChoices(album) {
@@ -94,19 +104,19 @@ function chooseAnswer(selectedButton) {
 
     if (selectedTrack === correctTrack) {
         score++;
-        result.textContent = `CORRECT · ${correctTrack} WASN'T ON IT`;
+        result.textContent = `CORRECT · ${outsiderReveal()}`;
     } else {
         score--;
         misses++;
         selectedButton.classList.add("choice-wrong");
-        result.textContent = `NOT ON THE ALBUM: ${correctTrack}`;
+        result.textContent = `NOT ON THIS ALBUM: ${outsiderReveal()}`;
     }
 
     updateScore();
 
     if (misses >= MAX_MISSES) {
         gameOver = true;
-        result.textContent = `GAME OVER · FINAL SCORE: ${score}`;
+        result.textContent = `GAME OVER · FINAL SCORE: ${score} · ${outsiderReveal()}`;
         nextButton.textContent = "NEW GAME ›";
     } else {
         nextButton.textContent = "NEXT ALBUM ›";
