@@ -347,7 +347,7 @@ function renderOpeningTrackRound() {
 
     currentAlbum = albumDeck.pop();
     roundLabel.textContent = "SIDE ONE · TRACK ONE";
-    questionLabel.textContent = "WHICH SONG OPENS THE ALBUM?";
+    questionLabel.innerHTML = 'WHICH SONG <span class="question-emphasis">OPENS</span> THE ALBUM?';
     albumTitle.textContent = currentAlbum.album;
     artistDisplay.textContent = currentAlbum.artist;
     yearDisplay.textContent = currentAlbum.year;
