@@ -7,6 +7,9 @@ let misses = 0;
 let gameOver = false;
 let currentOddTrack = null;
 let currentOddAlbum = null;
+let timelineAlbums = [];
+let timelinePicks = [];
+let timelineRoundNext = false;
 const MAX_MISSES = 4;
 
 const albumTitle = document.getElementById("album");
@@ -16,6 +19,8 @@ const result = document.getElementById("result");
 const nextButton = document.getElementById("next");
 const scoreDisplay = document.getElementById("score");
 const choicesContainer = document.getElementById("choices");
+const roundLabel = document.getElementById("round-label");
+const questionLabel = document.getElementById("question-label");
 
 function shuffle(array) {
     const copy = [...array];
@@ -86,6 +91,73 @@ function renderChoices(album) {
     });
 }
 
+function renderTimelineChoices() {
+    choicesContainer.innerHTML = "";
+    timelinePicks = [];
+
+    timelineAlbums.forEach((album, index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "choice timeline-choice";
+        button.dataset.index = index;
+        button.dataset.label = `${album.album} · ${album.artist}`;
+        button.textContent = button.dataset.label;
+        button.addEventListener("click", () => chooseTimelineAlbum(button));
+        choicesContainer.appendChild(button);
+    });
+}
+
+function chooseTimelineAlbum(button) {
+    if (answered || button.classList.contains("timeline-selected")) return;
+
+    timelinePicks.push(Number(button.dataset.index));
+    button.classList.add("timeline-selected");
+    button.textContent = `${timelinePicks.length}. ${button.dataset.label}`;
+
+    if (timelinePicks.length < timelineAlbums.length) return;
+
+    answered = true;
+    rounds++;
+    const correctOrder = timelineAlbums
+        .map((album, index) => ({ album, index }))
+        .sort((a, b) => a.album.year - b.album.year);
+    const correct = timelinePicks.every((picked, position) =>
+        picked === correctOrder[position].index
+    );
+
+    choicesContainer.querySelectorAll(".choice").forEach(choice => {
+        choice.disabled = true;
+    });
+
+    const timeline = correctOrder
+        .map(item => `${item.album.album} (${item.album.year})`)
+        .join(" → ");
+
+    if (correct) {
+        score++;
+        finishRound(`CORRECT · ${timeline}`);
+    } else {
+        score--;
+        misses++;
+        finishRound(`CORRECT ORDER: ${timeline}`);
+    }
+}
+
+function finishRound(message) {
+    result.textContent = message;
+    updateScore();
+
+    if (misses >= MAX_MISSES) {
+        gameOver = true;
+        result.textContent = `GAME OVER · FINAL SCORE: ${score} · ${message}`;
+        nextButton.textContent = "NEW GAME ›";
+    } else {
+        nextButton.textContent = "NEXT ROUND ›";
+    }
+
+    nextButton.classList.remove("hidden");
+}
+
 function chooseAnswer(selectedButton) {
     if (answered) return;
     answered = true;
@@ -112,17 +184,7 @@ function chooseAnswer(selectedButton) {
         result.textContent = `NOT ON THIS ALBUM: ${outsiderReveal()}`;
     }
 
-    updateScore();
-
-    if (misses >= MAX_MISSES) {
-        gameOver = true;
-        result.textContent = `GAME OVER · FINAL SCORE: ${score} · ${outsiderReveal()}`;
-        nextButton.textContent = "NEW GAME ›";
-    } else {
-        nextButton.textContent = "NEXT ALBUM ›";
-    }
-
-    nextButton.classList.remove("hidden");
+    finishRound(result.textContent);
 }
 
 function updateScore() {
@@ -136,12 +198,24 @@ function startNewGame() {
     gameOver = false;
     albumDeck = [];
     currentAlbum = null;
+    timelineRoundNext = false;
     updateScore();
     newAlbum();
 }
 
 function newAlbum() {
     answered = false;
+
+    if (timelineRoundNext) {
+        renderTimelineRound();
+    } else {
+        renderIntruderRound();
+    }
+
+    timelineRoundNext = !timelineRoundNext;
+}
+
+function renderIntruderRound() {
 
     if (albumDeck.length === 0) {
         albumDeck = shuffle(ALBUMS);
@@ -154,12 +228,37 @@ function newAlbum() {
     }
 
     currentAlbum = albumDeck.pop();
+    roundLabel.textContent = "ALBUM · FIND THE INTRUDER";
+    questionLabel.textContent = "WHICH SONG WASN'T ON THIS ALBUM?";
     albumTitle.textContent = currentAlbum.album;
     artistDisplay.textContent = currentAlbum.artist;
     yearDisplay.textContent = currentAlbum.year || "";
     result.textContent = "";
     nextButton.classList.add("hidden");
     renderChoices(currentAlbum);
+}
+
+function renderTimelineRound() {
+    const candidates = shuffle(ALBUMS);
+    timelineAlbums = [];
+    const usedYears = new Set();
+
+    for (const album of candidates) {
+        if (!usedYears.has(album.year)) {
+            timelineAlbums.push(album);
+            usedYears.add(album.year);
+        }
+        if (timelineAlbums.length === 4) break;
+    }
+
+    roundLabel.textContent = "ALBUM TIMELINE";
+    questionLabel.textContent = "TAP EARLIEST TO LATEST";
+    albumTitle.textContent = "PUT THEM IN ORDER";
+    artistDisplay.textContent = "";
+    yearDisplay.textContent = "";
+    result.textContent = "";
+    nextButton.classList.add("hidden");
+    renderTimelineChoices();
 }
 
 nextButton.addEventListener("click", () => {
