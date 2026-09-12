@@ -24,6 +24,10 @@ const questionLabel = document.getElementById("question-label");
 const timelineActions = document.getElementById("timeline-actions");
 const deselectButton = document.getElementById("deselect");
 const submitOrderButton = document.getElementById("submit-order");
+const gameCard = document.getElementById("game-card");
+const gameOverScreen = document.getElementById("game-over");
+const finalScoreDisplay = document.getElementById("final-score");
+const newGameButton = document.getElementById("new-game");
 
 function shuffle(array) {
     const copy = [...array];
@@ -215,8 +219,11 @@ function finishRound(message) {
 
     if (misses >= MAX_MISSES) {
         gameOver = true;
-        result.textContent = `GAME OVER · FINAL SCORE: ${score} · ${message}`;
-        nextButton.textContent = "NEW GAME ›";
+        finalScoreDisplay.textContent = score;
+        gameCard.classList.add("hidden");
+        gameOverScreen.classList.remove("hidden");
+        nextButton.classList.add("hidden");
+        return;
     } else {
         nextButton.textContent = "NEXT ROUND ›";
     }
@@ -265,6 +272,8 @@ function startNewGame() {
     albumDeck = [];
     currentAlbum = null;
     roundTypeDeck = [];
+    gameOverScreen.classList.add("hidden");
+    gameCard.classList.remove("hidden");
     updateScore();
     newAlbum();
 }
@@ -366,6 +375,7 @@ function renderOpeningTrackRound() {
 
 deselectButton.addEventListener("click", deselectLastTimelineAlbum);
 submitOrderButton.addEventListener("click", submitTimelineOrder);
+newGameButton.addEventListener("click", startNewGame);
 
 nextButton.addEventListener("click", () => {
     if (gameOver) {
