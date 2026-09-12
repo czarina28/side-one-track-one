@@ -1,0 +1,916 @@
+[
+  {
+    "artist": "The Beatles",
+    "album": "Revolver",
+    "candidate_opening_tracks": [
+      "90'lar",
+      "Ain't Been Done",
+      "EDY",
+      "Everday Things",
+      "Everyday Thangs (intro)",
+      "Feito gente",
+      "Finanzmann",
+      "Fuera de lugar",
+      "Journey",
+      "Lennetään",
+      "Louder Than Moans From a Sadomasochistic Porn",
+      "No Compromise",
+      "Pourrais-je dire encore je t'aime ?",
+      "REVOLVER",
+      "REVOLVER (extended mix)",
+      "Revolver",
+      "Revolver (Madonna vs. David Guetta One Love Remix)",
+      "Revolver (Madonna vs. David Guetta One Love remix)",
+      "Revolver (One Love remix)",
+      "Revolver (SE)",
+      "Revolver (extended mix)",
+      "Taxman",
+      "Taxman (2022 mix)",
+      "Taxman (mono)",
+      "Triggerfinger",
+      "Un amico",
+      "Unshakeable",
+      "Voice Tweaker",
+      "Wisconsin (unedited)",
+      "reVOLVER",
+      "クイーンオブハート"
+    ],
+    "candidate_count": 157
+  },
+  {
+    "artist": "The Beatles",
+    "album": "Sgt. Pepper's Lonely Hearts Club Band",
+    "candidate_opening_tracks": [
+      "Please Stop Kicking My Head",
+      "Sgt. Pepper's Lonely Hearts Club Band"
+    ],
+    "candidate_count": 4
+  },
+  {
+    "artist": "The Beatles",
+    "album": "Abbey Road",
+    "candidate_opening_tracks": [
+      "Abbey Road",
+      "Come Together",
+      "Come Together (2019 Mix)",
+      "Come Together (2019 mix)",
+      "Here Comes the Sun",
+      "The Ballad Of John And Yoko",
+      "カム・トゥゲザー"
+    ],
+    "candidate_count": 75
+  },
+  {
+    "artist": "The Rolling Stones",
+    "album": "Let It Bleed",
+    "candidate_opening_tracks": [
+      "Gimme Shelter",
+      "Gimme Shelter (stereo)",
+      "Gimmie Shelter",
+      "Let It Bleed",
+      "Let It Bleed (Padded Cell vocal mix)",
+      "Let it Bleed",
+      "Manchurian Candidates (The Apocalypse Ballad)",
+      "Part 1: “Bridges”, Chapter 1, Part 1"
+    ],
+    "candidate_count": 53
+  },
+  {
+    "artist": "The Rolling Stones",
+    "album": "Sticky Fingers",
+    "candidate_opening_tracks": [
+      "Brown Sugar",
+      "Brown Sugar (early vocal)",
+      "Patrick's Annabel/Donald Willie and his Dog/The Price of the Pig",
+      "Sticky Fingers",
+      "Sticky Fingers (Pierce Fulton remix)",
+      "Sticky Fingers (original mix)",
+      "Sticky Fingers (radio edit)",
+      "Swinging Shuffle",
+      "Wastin' My Love",
+      "You Don't Know My Name (Loverush UK Mix)",
+      "sticky fingers"
+    ],
+    "candidate_count": 63
+  },
+  {
+    "artist": "The Rolling Stones",
+    "album": "Exile on Main St.",
+    "candidate_opening_tracks": [
+      "Loving Cup (alternate take)",
+      "Pass the Wine (Sophia Loren)",
+      "Rocks Off",
+      "Rocks Off (2009 mix)"
+    ],
+    "candidate_count": 60
+  },
+  {
+    "artist": "The Who",
+    "album": "Who's Next",
+    "candidate_opening_tracks": [
+      "Exposed"
+    ],
+    "candidate_count": 1
+  },
+  {
+    "artist": "The Kinks",
+    "album": "The Kinks Are the Village Green Preservation Society",
+    "candidate_opening_tracks": [
+      "The Village Green Preservation Society",
+      "The Village Green Preservation Society (original withdrawn Europe 12‐track stereo LP)",
+      "The Village Green Preservation Society (stereo mix)"
+    ],
+    "candidate_count": 28
+  },
+  {
+    "artist": "The Velvet Underground",
+    "album": "The Velvet Underground & Nico",
+    "candidate_opening_tracks": [
+      "I’m Waiting for the Man",
+      "Sunday Morning",
+      "Sunday Morning (mono)"
+    ],
+    "candidate_count": 52
+  },
+  {
+    "artist": "Jefferson Airplane",
+    "album": "Surrealistic Pillow",
+    "candidate_opening_tracks": [
+      "My Best Friend",
+      "She Has Funny Cars",
+      "Surrealistic Pillow",
+      "Surrealistic Pillow (extended Re-mix)"
+    ],
+    "candidate_count": 31
+  },
+  {
+    "artist": "The Doors",
+    "album": "The Doors",
+    "candidate_opening_tracks": [
+      "Break On Through (to the Other Side)",
+      "Break on Through (To the Other Side)",
+      "Break on Through (to the Other Side)",
+      "Light My Fire",
+      "Roadhouse Blues",
+      "The Doors"
+    ],
+    "candidate_count": 59
+  },
+  {
+    "artist": "Jimi Hendrix",
+    "album": "Are You Experienced",
+    "candidate_opening_tracks": [
+      "Are You Experienced",
+      "Are You Experienced?",
+      "Foxy Lady",
+      "Heights of Paranoia",
+      "Hey Joe",
+      "Purple Haze",
+      "What's Your Bag?"
+    ],
+    "candidate_count": 60
+  },
+  {
+    "artist": "Led Zeppelin",
+    "album": "Led Zeppelin",
+    "candidate_opening_tracks": [
+      "Dazed and Confused",
+      "Good Times Bad Times",
+      "Good Times Bad Times (1993 remaster)",
+      "I Get a Thrill",
+      "We’re Gonna Groove",
+      "We’re Gonna Groove (Royal Albert Hall, January 9, 1970)",
+      "Whole Lotta Love",
+      "[opening]"
+    ],
+    "candidate_count": 82
+  },
+  {
+    "artist": "Led Zeppelin",
+    "album": "Led Zeppelin IV",
+    "candidate_opening_tracks": [
+      "C'est La Vie"
+    ],
+    "candidate_count": 1
+  },
+  {
+    "artist": "Pink Floyd",
+    "album": "The Dark Side of the Moon",
+    "candidate_opening_tracks": [
+      "A test fala",
+      "Speak to Me",
+      "Speak to Me / Breath",
+      "Speak to Me / Breathe",
+      "Speak to Me / Breathe (in the Air)",
+      "Speak to Me / Breathe in the Air",
+      "Speak to Me / Breathe in the Air (US Promo EP)",
+      "The Dark Side of the Moon",
+      "The Great Gig in My Hole",
+      "The Sun Will Never Rise"
+    ],
+    "candidate_count": 161
+  },
+  {
+    "artist": "Pink Floyd",
+    "album": "Wish You Were Here",
+    "candidate_opening_tracks": [
+      "50° 16′ 1.3836″ N, 5° 1′ 48.7389″ W",
+      "A Few Words for the Dead",
+      "Announcement",
+      "Canyon",
+      "Denial of Sea",
+      "Don't Think I Won't",
+      "Fortune Cookies",
+      "Improvise",
+      "Intro",
+      "Intro (Radio Murda)",
+      "Just A Chance",
+      "Just a Chance",
+      "Like Me, Like You",
+      "Magic",
+      "Middle of a Storm",
+      "Naive",
+      "On a Slow Boat to China",
+      "Please Stay",
+      "Reborn",
+      "Rewind (a part of Visitor)",
+      "Shine On You Crazy Diamond",
+      "Shine On You Crazy Diamond (1-5)",
+      "Shine On You Crazy Diamond (Part 1) / Shine On You Crazy Diamond (Part 2) / Shine On You Crazy Diamond (Part 3) / Shine On You Crazy Diamond (Part 4) / Shine On You Crazy Diamond (Part 5) / Welcome to the Machine",
+      "Shine On You Crazy Diamond (Part 1-5)",
+      "Shine On You Crazy Diamond (Part 1–5)",
+      "Shine On You Crazy Diamond (Part One)",
+      "Shine On You Crazy Diamond (Parts 1 - 5)",
+      "Shine On You Crazy Diamond (Parts 1-5)",
+      "Shine On You Crazy Diamond (Parts 1–5)",
+      "Shine On You Crazy Diamond (Parts 1–9)",
+      "Shine On You Crazy Diamond (Pts. 1–5)",
+      "Shine On You Crazy Diamond, Part 1",
+      "Shine On You Crazy Diamond, Part One",
+      "Shine On You Crazy Diamond, Parts 1-5",
+      "Shine On You Crazy Diamond, Parts 1–5",
+      "Shine On You Crazy Diamond, Parts I–V",
+      "Shine On You Crazy Diamond, Pts. 1–5",
+      "Shine On You Crazy Diamond, Pts. 1–5 (2025 Dolby Atmos mix)",
+      "Shine On You Crazy Diamond, Pts. 1–6 (live at Wembley 1974) (2011 mix)",
+      "Shine On You Crazy Diamond: Part I / Part II / Part III / Part IV / Part V",
+      "Shine on You Crazy Diamond (Parts 1-5)",
+      "Sugar, You",
+      "THROW UP",
+      "The Barmaid-Chase Her Through the Garden",
+      "The Bright Side",
+      "Wish You Were Here",
+      "Wish You Were Here (2011 remaster)",
+      "Wish You Were Here (Handz Up club mix)",
+      "Wish You Were Here (Radio Edit)",
+      "Wish You Were Here (Stampede remix)",
+      "Wish You Were Here (album version)",
+      "Wish You Were Here (live)",
+      "Wish You Were Here (original mix)",
+      "Wish You Were Here (radio edit)",
+      "Wish You Were Here 50 (unboxing)",
+      "You Could Be the One",
+      "[data track]",
+      "fortune cookies",
+      "white ferrari",
+      "wish you were here",
+      "Доброе Утро"
+    ],
+    "candidate_count": 233
+  },
+  {
+    "artist": "David Bowie",
+    "album": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+    "candidate_opening_tracks": [
+      "Five Years",
+      "Five Years (2024 Dolby Atmos mix)",
+      "Starman (remaster 2012)"
+    ],
+    "candidate_count": 63
+  },
+  {
+    "artist": "David Bowie",
+    "album": "Hunky Dory",
+    "candidate_opening_tracks": [
+      "Changes",
+      "Changes (Cambios)",
+      "Life on Mars?"
+    ],
+    "candidate_count": 38
+  },
+  {
+    "artist": "Fleetwood Mac",
+    "album": "Rumours",
+    "candidate_opening_tracks": [
+      "Arunner",
+      "Focus",
+      "I Don’t Want to Know",
+      "Intro",
+      "RUMOURS",
+      "Rumours",
+      "Rumours (Ed-Case & Carl H. vocal)",
+      "Rumours (Johnny Douglas mix)",
+      "Rumours (K.O. 12\" mix)",
+      "Rumours (radio mix)",
+      "Rumours (vocal mix)",
+      "Second Hand News",
+      "The \"It\" Factor",
+      "The Chain",
+      "Tin Soldier"
+    ],
+    "candidate_count": 115
+  },
+  {
+    "artist": "Carole King",
+    "album": "Tapestry",
+    "candidate_opening_tracks": [
+      "Amnis",
+      "Asagefo",
+      "Beside You",
+      "Castles in the Air",
+      "Circle",
+      "Corporeal Prelude",
+      "Human",
+      "I Feel The Earth Move",
+      "I Feel the Earth Move",
+      "Krug",
+      "Prairie Moon",
+      "Siento La Tierra Moverse = I Feel the Earth Move",
+      "Siento Que La Tierra Se Mueve = I Feel the Earth Move",
+      "Siento Que Se Mueve = I Feel the Earth Move",
+      "Siento Que Se Mueve La Tierra = I Feel the Earth Move",
+      "Smackwater Jack",
+      "Sweet",
+      "Sweet Lorraine",
+      "Tapestry",
+      "Tapestry Intro",
+      "Tapestry feat. Illaman",
+      "Temblando de Amor = I Feel the Earth Move",
+      "The Mending",
+      "The Rolling Wave/Chahar Mezrab",
+      "Undertow",
+      "We Are the Flood",
+      "Weaver's Touch",
+      "tapestry",
+      "トキドキセカイ"
+    ],
+    "candidate_count": 219
+  },
+  {
+    "artist": "Marvin Gaye",
+    "album": "What's Going On",
+    "candidate_opening_tracks": [
+      "Ain't That Something",
+      "Autumn Leaves",
+      "Mister Holland",
+      "Sharing the Night Together",
+      "What's Going On",
+      "What's Going On (In Your Mind)",
+      "What's Going On (Original Mix)",
+      "What's Going On (Seb's dub)",
+      "What's Going On (There's Something Going On) (Radio Edit)",
+      "What's Going On (radio mix)",
+      "What's Going On [Radio Edit Mix]",
+      "What's going on",
+      "Whats Going On",
+      "What’s going on"
+    ],
+    "candidate_count": 20
+  },
+  {
+    "artist": "Stevie Wonder",
+    "album": "Songs in the Key of Life",
+    "candidate_opening_tracks": [
+      "Isn't She Lovely",
+      "Love's in Need of Love Today",
+      "Love’s in Need of Love Today"
+    ],
+    "candidate_count": 36
+  },
+  {
+    "artist": "Patti Smith",
+    "album": "Horses",
+    "candidate_opening_tracks": [
+      "14 Years",
+      "Autumn",
+      "Freight Train",
+      "Gloria",
+      "Gloria: In Excelsis Deo",
+      "Gloria: In Excelsis Deo / Gloria (version)",
+      "Horses",
+      "I See Horses",
+      "Kephyläu",
+      "Kisouma",
+      "Like a Wolf",
+      "Single Ladies (Put a Ring on It)",
+      "horses"
+    ],
+    "candidate_count": 58
+  },
+  {
+    "artist": "Ramones",
+    "album": "Ramones",
+    "candidate_opening_tracks": [
+      "Blitzkrieg Bop"
+    ],
+    "candidate_count": 21
+  },
+  {
+    "artist": "The Clash",
+    "album": "London Calling",
+    "candidate_opening_tracks": [
+      "Babutsa",
+      "Crimson",
+      "Güzelim",
+      "LONDON CALLING",
+      "London Calling",
+      "London Calling (2012 mix)",
+      "London Calling (Artpop Radio Mix)",
+      "Trip To Upper Volta",
+      "[NPG Hornz jazz intro]"
+    ],
+    "candidate_count": 66
+  },
+  {
+    "artist": "Talking Heads",
+    "album": "Remain in Light",
+    "candidate_opening_tracks": [
+      "Born Under Punches",
+      "Born Under Punches (The Heat Goes On)",
+      "Born Under Punches (The Heat Goes On) (2005 remastered album version)",
+      "Born Under Punches (The Heat Goes on)",
+      "Crosseyed and Painless",
+      "Remain In Light (Blende Edit)"
+    ],
+    "candidate_count": 97
+  },
+  {
+    "artist": "Joy Division",
+    "album": "Unknown Pleasures",
+    "candidate_opening_tracks": [
+      "A Time to Be Small",
+      "Disorder"
+    ],
+    "candidate_count": 56
+  },
+  {
+    "artist": "The Cure",
+    "album": "Disintegration",
+    "candidate_opening_tracks": [
+      "Altar",
+      "Blinded",
+      "Cella",
+      "Death Head Said",
+      "Disintegrated World",
+      "Disintegration",
+      "Disintegration As Above",
+      "Disintegration I",
+      "Distant",
+      "Equilibrium",
+      "Inception (An Imitation of Life)",
+      "Otherway",
+      "Plainsong",
+      "Struktur",
+      "Struktur (instrumental)",
+      "The Snake",
+      "Марионетка",
+      "涙の誓い"
+    ],
+    "candidate_count": 52
+  },
+  {
+    "artist": "Bauhaus",
+    "album": "The Sky's Gone Out",
+    "candidate_opening_tracks": [],
+    "candidate_count": 0
+  },
+  {
+    "artist": "Depeche Mode",
+    "album": "Some Great Reward",
+    "candidate_opening_tracks": [
+      "Something to Do"
+    ],
+    "candidate_count": 30
+  },
+  {
+    "artist": "The Smiths",
+    "album": "The Queen Is Dead",
+    "candidate_opening_tracks": [
+      "The Queen Is Dead",
+      "The Queen Is Dead (Take Me Back to Dear Old Blighty (medley)",
+      "The Queen Is Dead (Take Me Back to Dear Old Blighty (medley))",
+      "The Queen Is Dead 1"
+    ],
+    "candidate_count": 36
+  },
+  {
+    "artist": "R.E.M.",
+    "album": "Murmur",
+    "candidate_opening_tracks": [
+      "Call",
+      "Dead All Along",
+      "Descend",
+      "Ghost Rattle",
+      "MURMUR",
+      "Morel",
+      "Murmur",
+      "Murmur (Version from the For Want Of LP)",
+      "One Wicker Wisp",
+      "Part One",
+      "Radio Free Europe",
+      "Temple of Flies",
+      "The Three Waters",
+      "Transmission",
+      "Water Bone",
+      "Water From Water",
+      "Yield 23",
+      "asimov",
+      "baikal",
+      "murmur",
+      "ぴ・え・にゅ",
+      "光の河",
+      "春風",
+      "水の骨"
+    ],
+    "candidate_count": 64
+  },
+  {
+    "artist": "Violent Femmes",
+    "album": "Violent Femmes",
+    "candidate_opening_tracks": [
+      "Blister in the Sun"
+    ],
+    "candidate_count": 23
+  },
+  {
+    "artist": "The Stone Roses",
+    "album": "The Stone Roses",
+    "candidate_opening_tracks": [
+      "I Wanna Be Adored",
+      "I Wanna Be Adored (Remastered)",
+      "I Wanna Be Adored - Remastered 2009"
+    ],
+    "candidate_count": 38
+  },
+  {
+    "artist": "Prince",
+    "album": "Purple Rain",
+    "candidate_opening_tracks": [
+      "Diamonds and Pearls",
+      "Let's Go Crazy",
+      "Let’s Go Crazy",
+      "Let’s Go Crazy (2015 Paisley Park remaster)",
+      "Let’s Go Crazy (Atmos mix)",
+      "My City",
+      "Purple Rain",
+      "Purple Rain (Long Version)",
+      "Purple Rain (X Factor performance)",
+      "Purple Rain (long version)",
+      "Purple Rain (short version)",
+      "purple rain"
+    ],
+    "candidate_count": 85
+  },
+  {
+    "artist": "Kate Bush",
+    "album": "Hounds of Love",
+    "candidate_opening_tracks": [
+      "(A Deal with God) Running Up That Hill",
+      "Alternative Hounds of Love",
+      "Hounds of Love",
+      "Running Up That Hill",
+      "Running Up That Hill (A Deal With God)",
+      "Running Up That Hill (A Deal with God)",
+      "Subiendo a esa colina",
+      "Subiendo esa colina",
+      "神秘の丘"
+    ],
+    "candidate_count": 223
+  },
+  {
+    "artist": "Peter Gabriel",
+    "album": "So",
+    "candidate_opening_tracks": [
+      "01",
+      "All That Beauty There",
+      "Big Trip Believing",
+      "Big Trip Believing (extended mix)",
+      "Ghjirulatu",
+      "Intro",
+      "Pool of Tears",
+      "Red Rain",
+      "Red Rain (Красный дождь)",
+      "STRL",
+      "So",
+      "Staklo",
+      "The Tree",
+      "Up&Down",
+      "YOUR GIRLFRIEND",
+      "a",
+      "so",
+      "Красный дождь",
+      "讓我暖一些（劇場版）"
+    ],
+    "candidate_count": 72
+  },
+  {
+    "artist": "The Police",
+    "album": "Synchronicity",
+    "candidate_opening_tracks": [
+      "Against the Stigma",
+      "Annoying the Neighbours",
+      "Ben Sims pres. Synchronicity Mixed",
+      "Big Mind",
+      "Cats at Night",
+      "Cloud 9",
+      "Creative Benediction",
+      "Dream Hoarding",
+      "Every Thing Is Changing",
+      "Fading Ground",
+      "Fall In Spinning",
+      "Gloria",
+      "Herbivore Dub * 1",
+      "Holy Ground",
+      "Last Song",
+      "Mirror Mirror",
+      "Mountain Tops",
+      "Night Hugs",
+      "SYNCHRONICITY",
+      "SYNCHRONIZATION",
+      "SYNCHRONIZE",
+      "Save",
+      "Save the World",
+      "See",
+      "Sun Static",
+      "Synchroni-city 〜Opening〜",
+      "Synchronicity",
+      "Synchronicity (Remo-Con remix)",
+      "Synchronicity (Spincycle remix)",
+      "Synchronicity (radio edit)",
+      "Synchronicity 1",
+      "Synchronicity I",
+      "Syncronicity I",
+      "Tom Cruise",
+      "Transference",
+      "Under World",
+      "Under the Rose",
+      "ascension",
+      "every thing is changing",
+      "introduction",
+      "overture",
+      "solarhalfbreed",
+      "synchronicity"
+    ],
+    "candidate_count": 118
+  },
+  {
+    "artist": "U2",
+    "album": "The Joshua Tree",
+    "candidate_opening_tracks": [
+      "A Very Irish Album",
+      "Where the Streets Have No Name"
+    ],
+    "candidate_count": 67
+  },
+  {
+    "artist": "Pixies",
+    "album": "Doolittle",
+    "candidate_opening_tracks": [
+      "Dead (Peel session)",
+      "Debaser",
+      "Manta Ray"
+    ],
+    "candidate_count": 32
+  },
+  {
+    "artist": "Nirvana",
+    "album": "Nevermind",
+    "candidate_opening_tracks": [
+      "BETTER THAN LATER",
+      "Can't Sleep",
+      "Ego",
+      "Happy",
+      "Interview With a Black Man",
+      "NEVERMIND",
+      "Nevermind",
+      "Nevermind (Original Mix)",
+      "Nevermind (Quakers remix)",
+      "Room",
+      "Smells Like Teen Spirit",
+      "WESTCONNEX",
+      "nevermind",
+      "ไม่เป็นไร"
+    ],
+    "candidate_count": 151
+  },
+  {
+    "artist": "Pearl Jam",
+    "album": "Ten",
+    "candidate_opening_tracks": [
+      "-Ten-",
+      "11",
+      "1973",
+      "20230403",
+      "A Million Dreams",
+      "Ab Initio",
+      "America, the Beautiful",
+      "Angst",
+      "Anho",
+      "Are You Insane",
+      "Ay rumba calí",
+      "Back to the Street",
+      "Being Human",
+      "Better Part Of Me",
+      "Better Part of Me",
+      "Blue Blocks",
+      "Brand New Day",
+      "Bright Clouds",
+      "C&K X",
+      "Can’t Get Enough",
+      "Cavo d’Oro",
+      "Chaos (Bizzare Contact Remix)",
+      "Chaos (Bizzare Contact remix)",
+      "Disco Infierno (A/K/A \"Blues Inferno\")",
+      "Drizzle",
+      "Duet",
+      "Ekam",
+      "El punto inicial",
+      "Enola Reverof",
+      "G.N.T.M.",
+      "Glad You Came",
+      "Good Luck Trying",
+      "Hard Times",
+      "Helix",
+      "Hello",
+      "Hephaistos",
+      "I",
+      "I Love My Friends",
+      "If Not Now",
+      "Intro to Ten",
+      "Irish Wristwatch",
+      "Killer",
+      "Kuchkah Tay Zod",
+      "La Santa Muerte",
+      "Last Dance",
+      "Let the Good Times Roll",
+      "Locomotive Breath",
+      "Love of My Life",
+      "Lysergic Disorder",
+      "Me and the Boys",
+      "Mirage",
+      "My World",
+      "Natural Correlation",
+      "Need Somebody",
+      "Nightwalker",
+      "On a Mission",
+      "Once",
+      "Once (2008 Brendan O’Brien mix)",
+      "Past Myself",
+      "Pero ...",
+      "Point-Blank",
+      "Pop Song",
+      "Ready Steady Flow",
+      "Reflections",
+      "Safe Sound (original)",
+      "Self Sabotaging",
+      "Septum Heelrz",
+      "She",
+      "Smith Hill",
+      "Something New",
+      "Sonic Shake",
+      "Star (demo 2004)",
+      "TEN",
+      "Ten",
+      "Ten (original club mix)",
+      "Ten (original mix)",
+      "Ten 1",
+      "That Road",
+      "The American Dream",
+      "The Crusades / It's All About Love",
+      "The Gardener",
+      "Those Kind of People",
+      "Three Pieces from the Spanish Renaissance - Anon. i: Pase al agua",
+      "Traffic",
+      "Used to Be My Girl",
+      "Victory",
+      "Ya Can't Stay Here",
+      "You Will Save Me",
+      "Zeal - allskate remix",
+      "believe",
+      "en i",
+      "low bit hot springs",
+      "motion",
+      "nois",
+      "ten",
+      "―TEN―",
+      "きもだめし",
+      "リアル・バーチャル・混沌",
+      "以心伝心",
+      "小悪魔ジュリエット"
+    ],
+    "candidate_count": 195
+  },
+  {
+    "artist": "Radiohead",
+    "album": "OK Computer",
+    "candidate_opening_tracks": [
+      "Airbag",
+      "Ok Computer"
+    ],
+    "candidate_count": 39
+  },
+  {
+    "artist": "Oasis",
+    "album": "(What's the Story) Morning Glory?",
+    "candidate_opening_tracks": [],
+    "candidate_count": 0
+  },
+  {
+    "artist": "Blur",
+    "album": "Parklife",
+    "candidate_opening_tracks": [
+      "Girls & Boys",
+      "Girls & Boys (Pet Shop Boys radio edit)",
+      "Girls and Boys",
+      "Parklife",
+      "[data track]"
+    ],
+    "candidate_count": 27
+  },
+  {
+    "artist": "Pulp",
+    "album": "Different Class",
+    "candidate_opening_tracks": [
+      "Different Class",
+      "Mile End",
+      "Mis-Shapes",
+      "Mis‐Shapes",
+      "The Upside of the Recession"
+    ],
+    "candidate_count": 23
+  },
+  {
+    "artist": "The Strokes",
+    "album": "Is This It",
+    "candidate_opening_tracks": [
+      "1. Is this it",
+      "Is This It",
+      "Is This It (home recording)",
+      "blew it"
+    ],
+    "candidate_count": 29
+  },
+  {
+    "artist": "Arcade Fire",
+    "album": "Funeral",
+    "candidate_opening_tracks": [
+      "35 millones de borregos",
+      "Abyss of Night",
+      "Buried",
+      "Culture",
+      "Dead Stare",
+      "ELEGY",
+      "FUNERAL",
+      "Funeral",
+      "Indifferent People",
+      "Intro X",
+      "Lethal Wind of Destruction",
+      "Love Songs",
+      "Memorial",
+      "Neighborhood #1 (Tunnels)",
+      "Shimmy",
+      "The Wait",
+      "Tiger in a Box",
+      "Torment",
+      "Waiting for the sun",
+      "When You Hold Me",
+      "burning word",
+      "funeral",
+      "夜の淵"
+    ],
+    "candidate_count": 99
+  },
+  {
+    "artist": "Amy Winehouse",
+    "album": "Back to Black",
+    "candidate_opening_tracks": [
+      "Back To Black",
+      "Back To Black (Intro.)",
+      "Back to Black",
+      "Back to Black (Steve Mac remix)",
+      "Back to Black (X Factor performance)",
+      "Celestial Blues",
+      "Jealous Guy",
+      "Maple Leaf Rag",
+      "Rehab",
+      "You're Slippin'"
+    ],
+    "candidate_count": 69
+  },
+  {
+    "artist": "Arctic Monkeys",
+    "album": "Whatever People Say I Am, That's What I'm Not",
+    "candidate_opening_tracks": [],
+    "candidate_count": 0
+  }
+]
