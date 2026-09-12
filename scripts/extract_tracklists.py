@@ -147,6 +147,7 @@ print(
 
 releases_by_key = defaultdict(list)
 release_id_to_key = {}
+release_by_id = {}
 
 print("Scanning release...")
 
@@ -172,12 +173,51 @@ for row in read_tsv("release"):
 
     releases_by_key[key].append(release)
     release_id_to_key[row[0]] = key
+    release_by_id[row[0]] = release
 
 
 print(
     f"Found {len(release_id_to_key)} "
     "candidate releases."
 )
+
+
+# ---------------------------------------------------------
+# Release dates
+#
+# release_country / release_unknown_country:
+# 0 release, 1 country (country table only), then year/month/day
+# ---------------------------------------------------------
+
+print("Scanning release dates...")
+
+for table_name, year_column in (
+    ("release_country", 2),
+    ("release_unknown_country", 1),
+):
+    for row in read_tsv(table_name):
+        if len(row) <= year_column or row[0] not in release_by_id:
+            continue
+
+        try:
+            year = int(row[year_column])
+        except (TypeError, ValueError):
+            continue
+
+        release = release_by_id[row[0]]
+        current = release.get("year")
+        if current is None or year < current:
+            release["year"] = year
+
+years_by_key = {
+    key: min(
+        release["year"]
+        for release in releases
+        if release.get("year")
+    )
+    for key, releases in releases_by_key.items()
+    if any(release.get("year") for release in releases)
+}
 
 
 # ---------------------------------------------------------
@@ -247,6 +287,7 @@ for seed in seeds:
 
     def rank(m):
         fmt = m["format_id"]
+        release = release_by_id[m["release_id"]]
 
         if fmt == "12":
             format_rank = 0
@@ -258,6 +299,7 @@ for seed in seeds:
             format_rank = 3
 
         return (
+            release.get("year", 9999),
             format_rank,
             m["release_id"]
         )
@@ -370,6 +412,7 @@ for seed in seeds:
     output.append({
         "artist": seed["artist"],
         "album": seed["album"],
+        "year": years_by_key.get(key),
         "release_group_mbid": groups_by_key[key],
         "release_mbid": next(
             (
@@ -404,7 +447,7 @@ with OUTPUT.open(
 print()
 print("----------------------------------------")
 print(f"Wrote: {OUTPUT}")
-print(f"Albums written: {len(output)} / 50")
+print(f"Albums written: {len(output)} / {len(seeds)}")
 
 print()
 print("Opening tracks:")
