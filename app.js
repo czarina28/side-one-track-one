@@ -9,7 +9,7 @@ let currentOddTrack = null;
 let currentOddAlbum = null;
 let timelineAlbums = [];
 let timelinePicks = [];
-let timelineRoundNext = false;
+let roundTypeDeck = [];
 const MAX_MISSES = 4;
 
 const albumTitle = document.getElementById("album");
@@ -89,6 +89,49 @@ function renderChoices(album) {
         button.addEventListener("click", () => chooseAnswer(button));
         choicesContainer.appendChild(button);
     });
+}
+
+function renderOpeningTrackChoices(album) {
+    choicesContainer.innerHTML = "";
+    const correct = album.opening_track;
+    const otherTracks = cleanTrackPool(album).filter(track => track !== correct);
+    const choices = shuffle([correct, ...shuffle(otherTracks).slice(0, 3)]);
+
+    choices.forEach((track, index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "choice";
+        button.dataset.track = track;
+        button.textContent = `${index + 1}. ${track}`;
+        button.addEventListener("click", () => chooseOpeningTrack(button));
+        choicesContainer.appendChild(button);
+    });
+}
+
+function chooseOpeningTrack(selectedButton) {
+    if (answered) return;
+    answered = true;
+    rounds++;
+
+    const selectedTrack = selectedButton.dataset.track;
+    const correctTrack = currentAlbum.opening_track;
+
+    choicesContainer.querySelectorAll(".choice").forEach(button => {
+        button.disabled = true;
+        if (button.dataset.track === correctTrack) {
+            button.classList.add("choice-correct");
+        }
+    });
+
+    if (selectedTrack === correctTrack) {
+        score++;
+        finishRound(`CORRECT · SIDE ONE, TRACK ONE: ${correctTrack}`);
+    } else {
+        score--;
+        misses++;
+        selectedButton.classList.add("choice-wrong");
+        finishRound(`SIDE ONE, TRACK ONE: ${correctTrack}`);
+    }
 }
 
 function renderTimelineChoices() {
@@ -198,7 +241,7 @@ function startNewGame() {
     gameOver = false;
     albumDeck = [];
     currentAlbum = null;
-    timelineRoundNext = false;
+    roundTypeDeck = [];
     updateScore();
     newAlbum();
 }
@@ -206,13 +249,22 @@ function startNewGame() {
 function newAlbum() {
     answered = false;
 
-    if (timelineRoundNext) {
+    if (roundTypeDeck.length === 0) {
+        roundTypeDeck = shuffle([
+            "intruder", "intruder", "intruder", "intruder",
+            "timeline", "timeline", "timeline", "timeline",
+            "opening", "opening"
+        ]);
+    }
+
+    const roundType = roundTypeDeck.pop();
+    if (roundType === "timeline") {
         renderTimelineRound();
+    } else if (roundType === "opening") {
+        renderOpeningTrackRound();
     } else {
         renderIntruderRound();
     }
-
-    timelineRoundNext = !timelineRoundNext;
 }
 
 function renderIntruderRound() {
@@ -259,6 +311,22 @@ function renderTimelineRound() {
     result.textContent = "";
     nextButton.classList.add("hidden");
     renderTimelineChoices();
+}
+
+function renderOpeningTrackRound() {
+    if (albumDeck.length === 0) {
+        albumDeck = shuffle(ALBUMS);
+    }
+
+    currentAlbum = albumDeck.pop();
+    roundLabel.textContent = "SIDE ONE · TRACK ONE";
+    questionLabel.textContent = "WHICH SONG OPENS THE ALBUM?";
+    albumTitle.textContent = currentAlbum.album;
+    artistDisplay.textContent = currentAlbum.artist;
+    yearDisplay.textContent = currentAlbum.year;
+    result.textContent = "";
+    nextButton.classList.add("hidden");
+    renderOpeningTrackChoices(currentAlbum);
 }
 
 nextButton.addEventListener("click", () => {
