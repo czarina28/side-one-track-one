@@ -3,6 +3,9 @@ let answered = false;
 let score = 0;
 let rounds = 0;
 let albumDeck = [];
+let misses = 0;
+let gameOver = false;
+const MAX_MISSES = 4;
 
 const albumTitle = document.getElementById("album");
 const artistDisplay = document.getElementById("artist");
@@ -97,16 +100,38 @@ function chooseAnswer(selectedButton) {
         score++;
         result.textContent = "CORRECT";
     } else {
+        score--;
+        misses++;
         selectedButton.classList.add("choice-wrong");
         result.textContent = `SIDE ONE, TRACK ONE: ${correctTrack}`;
     }
 
     updateScore();
-    nextButton.style.display = "inline-block";
+
+    if (misses >= MAX_MISSES) {
+        gameOver = true;
+        result.textContent = `GAME OVER · FINAL SCORE: ${score}`;
+        nextButton.textContent = "NEW GAME ›";
+    } else {
+        nextButton.textContent = "NEXT ALBUM ›";
+    }
+
+    nextButton.classList.remove("hidden");
 }
 
 function updateScore() {
-    scoreDisplay.textContent = `${score} / ${rounds}`;
+    scoreDisplay.textContent = `SCORE ${score} · MISSES ${misses} / ${MAX_MISSES}`;
+}
+
+function startNewGame() {
+    score = 0;
+    rounds = 0;
+    misses = 0;
+    gameOver = false;
+    albumDeck = [];
+    currentAlbum = null;
+    updateScore();
+    newAlbum();
 }
 
 function newAlbum() {
@@ -127,11 +152,17 @@ function newAlbum() {
     artistDisplay.textContent = currentAlbum.artist;
     yearDisplay.textContent = currentAlbum.year || "";
     result.textContent = "";
-    nextButton.style.display = "none";
+    nextButton.classList.add("hidden");
     renderChoices(currentAlbum);
 }
 
-nextButton.addEventListener("click", newAlbum);
+nextButton.addEventListener("click", () => {
+    if (gameOver) {
+        startNewGame();
+    } else {
+        newAlbum();
+    }
+});
 
 document.addEventListener("keydown", event => {
     if (!answered && ["1", "2", "3", "4"].includes(event.key)) {
@@ -142,7 +173,11 @@ document.addEventListener("keydown", event => {
     }
 
     if (answered && event.key === "Enter") {
-        newAlbum();
+        if (gameOver) {
+            startNewGame();
+        } else {
+            newAlbum();
+        }
     }
 });
 
