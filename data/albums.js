@@ -2,6 +2,7 @@ const ALBUMS = [
   {
     "artist": "The Beatles",
     "album": "Revolver",
+    "year": 1966,
     "release_group_mbid": "72d15666-99a7-321e-b1f3-a3f8c09dff9f",
     "release_mbid": "40acdc6e-ab19-4c8c-a32b-f1d36f8b11ef",
     "format_id": "12",
@@ -27,6 +28,7 @@ const ALBUMS = [
   {
     "artist": "The Beatles",
     "album": "Sgt. Pepper's Lonely Hearts Club Band",
+    "year": 1967,
     "release_group_mbid": "9f7a4c28-8fa2-3113-929c-c47a9f7982c3",
     "release_mbid": "973cece2-bb7a-4fd0-903d-be542af46c01",
     "format_id": "12",
@@ -50,6 +52,7 @@ const ALBUMS = [
   {
     "artist": "The Beatles",
     "album": "Abbey Road",
+    "year": 1969,
     "release_group_mbid": "9162580e-5df4-32de-80cc-f45a8d8a9b1d",
     "release_mbid": "7de840f4-00b3-4184-b476-c702cf2213f4",
     "format_id": "12",
@@ -78,6 +81,7 @@ const ALBUMS = [
   {
     "artist": "The Rolling Stones",
     "album": "Let It Bleed",
+    "year": 1969,
     "release_group_mbid": "784c0edd-0f37-33a2-9ca5-dff87b4f999c",
     "release_mbid": "8ac0d5a6-d4e1-450e-8c18-acb8236446ec",
     "format_id": "12",
@@ -97,6 +101,7 @@ const ALBUMS = [
   {
     "artist": "The Rolling Stones",
     "album": "Sticky Fingers",
+    "year": 1971,
     "release_group_mbid": "4a4213d0-f224-3d51-bcca-476f61162681",
     "release_mbid": "0f4b6532-ac38-46a9-9626-1f08c879e21a",
     "format_id": "12",
@@ -117,6 +122,7 @@ const ALBUMS = [
   {
     "artist": "The Rolling Stones",
     "album": "Exile on Main St.",
+    "year": 1972,
     "release_group_mbid": "4838a3c9-fd2b-30a5-83eb-e32545b5d7fc",
     "release_mbid": "84bb0c3f-437a-4358-99cf-c7532ba4e3f4",
     "format_id": "12",
@@ -145,6 +151,7 @@ const ALBUMS = [
   {
     "artist": "The Who",
     "album": "Who's Next",
+    "year": 1971,
     "release_group_mbid": "9584e28b-66a7-3846-8d52-b3008a283539",
     "release_mbid": "fcf72779-d879-4ce0-9a70-7733f5d08119",
     "format_id": "12",
@@ -184,6 +191,7 @@ const ALBUMS = [
   {
     "artist": "The Kinks",
     "album": "The Kinks Are the Village Green Preservation Society",
+    "year": 1968,
     "release_group_mbid": "4516a30e-939c-3b2b-a8ea-f94ae418d3a6",
     "release_mbid": "1e46d364-96f8-4841-99c8-4a009809c89b",
     "format_id": "12",
@@ -254,6 +262,7 @@ const ALBUMS = [
   {
     "artist": "The Velvet Underground",
     "album": "The Velvet Underground & Nico",
+    "year": 1967,
     "release_group_mbid": "5cbd9d7b-597a-3c5e-bfd1-c2b364215560",
     "release_mbid": "9410713d-f1d1-4ab7-bf02-085ff822a649",
     "format_id": "12",
@@ -275,6 +284,7 @@ const ALBUMS = [
   {
     "artist": "Jefferson Airplane",
     "album": "Surrealistic Pillow",
+    "year": 1967,
     "release_group_mbid": "e6440cd2-5e8e-367d-bc49-cc042b5ef524",
     "release_mbid": "9668defc-b9f3-4594-8b34-d734897e0697",
     "format_id": "12",
@@ -302,6 +312,7 @@ const ALBUMS = [
   {
     "artist": "The Doors",
     "album": "The Doors",
+    "year": 1967,
     "release_group_mbid": "8ebffd15-06c3-3b88-a761-ec18c5513287",
     "release_mbid": "476a7266-c53c-4ad7-8f69-a6cd3bcf97f0",
     "format_id": "12",
@@ -323,6 +334,7 @@ const ALBUMS = [
   {
     "artist": "Jimi Hendrix",
     "album": "Are You Experienced",
+    "year": 1967,
     "release_group_mbid": "da40e720-2097-3730-8a7f-0c2ddbff4a96",
     "release_mbid": "bd205189-9fe9-4da7-b579-66b9c5c245c4",
     "format_id": "12",
@@ -350,6 +362,7 @@ const ALBUMS = [
   {
     "artist": "Led Zeppelin",
     "album": "Led Zeppelin",
+    "year": 1969,
     "release_group_mbid": "0f18ec88-aa87-38a9-8a65-f03d81763560",
     "release_mbid": "026864c4-c426-4f83-b4ca-d01c297b6ac9",
     "format_id": "12",
@@ -385,6 +398,7 @@ const ALBUMS = [
   {
     "artist": "Pink Floyd",
     "album": "The Dark Side of the Moon",
+    "year": 1973,
     "release_group_mbid": "f5093c06-23e3-404f-aeaa-40f72885ee3a",
     "release_mbid": "5eeac1d5-febe-4b81-a98d-ad7577c6562c",
     "format_id": "12",
@@ -405,6 +419,7 @@ const ALBUMS = [
   {
     "artist": "Pink Floyd",
     "album": "Wish You Were Here",
+    "year": 1975,
     "release_group_mbid": "1a272023-10d3-38ee-bab3-317b55fcc21d",
     "release_mbid": "eb8c2b5b-7099-4adb-aff9-b3be84cccda8",
     "format_id": "12",
@@ -420,6 +435,7 @@ const ALBUMS = [
   {
     "artist": "David Bowie",
     "album": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+    "year": 1972,
     "release_group_mbid": "6c9ae3dd-32ad-472c-96be-69d0a3536261",
     "release_mbid": "9fbc555f-61ca-4c7e-a5e8-058a9622a705",
     "format_id": "12",
@@ -441,6 +457,7 @@ const ALBUMS = [
   {
     "artist": "David Bowie",
     "album": "Hunky Dory",
+    "year": 1971,
     "release_group_mbid": "743b0b2e-a23a-3182-950e-232f8cb0dfb7",
     "release_mbid": "94a2c830-7000-4a02-ab78-756bdd0254a8",
     "format_id": "12",
@@ -462,6 +479,7 @@ const ALBUMS = [
   {
     "artist": "Fleetwood Mac",
     "album": "Rumours",
+    "year": 1977,
     "release_group_mbid": "416bb5e5-c7d1-3977-8fd7-7c9daf6c2be6",
     "release_mbid": "02face5e-6a23-4402-b4d7-fa752d031a35",
     "format_id": "12",
@@ -483,6 +501,7 @@ const ALBUMS = [
   {
     "artist": "Carole King",
     "album": "Tapestry",
+    "year": 1971,
     "release_group_mbid": "6e4f39e6-3403-39d7-81c6-8e61a990d509",
     "release_mbid": "89ab4236-fe8d-43c6-99d0-7aa1bd86afcd",
     "format_id": "12",
@@ -505,6 +524,7 @@ const ALBUMS = [
   {
     "artist": "Marvin Gaye",
     "album": "What's Going On",
+    "year": 1971,
     "release_group_mbid": "c1fa4d2c-ec62-37d5-b01d-6df7f8fd2c90",
     "release_mbid": "f36c4c00-f5a2-4d9a-9c69-21500958da9b",
     "format_id": "12",
@@ -526,6 +546,7 @@ const ALBUMS = [
   {
     "artist": "Stevie Wonder",
     "album": "Songs in the Key of Life",
+    "year": 1976,
     "release_group_mbid": "ea88b09b-fd34-33cf-a3e5-25a3a2fb4c6f",
     "release_mbid": "2312d75c-b542-441c-a628-ae7371e8d835",
     "format_id": "12",
@@ -546,6 +567,7 @@ const ALBUMS = [
   {
     "artist": "Patti Smith",
     "album": "Horses",
+    "year": 1975,
     "release_group_mbid": "ff8f533c-3cb3-3877-9209-11f433edaad2",
     "release_mbid": "9796404a-6fc9-4720-a57e-2deb71eb7c01",
     "format_id": "12",
@@ -564,6 +586,7 @@ const ALBUMS = [
   {
     "artist": "Ramones",
     "album": "Ramones",
+    "year": 1976,
     "release_group_mbid": "7de1e321-4a53-3feb-b83e-f1dab88bf952",
     "release_mbid": "7dd6a791-8fdd-410b-b47e-2495708f9c5c",
     "format_id": "12",
@@ -602,6 +625,7 @@ const ALBUMS = [
   {
     "artist": "The Clash",
     "album": "London Calling",
+    "year": 1979,
     "release_group_mbid": "8d73e45e-7ca1-3cb4-ae28-6da76196c17c",
     "release_mbid": "66aaa2e1-669d-423e-be52-bfa92c660e24",
     "format_id": "12",
@@ -631,6 +655,7 @@ const ALBUMS = [
   {
     "artist": "Talking Heads",
     "album": "Remain in Light",
+    "year": 1980,
     "release_group_mbid": "f6b1b900-6108-32f0-abbd-2855af9151eb",
     "release_mbid": "b1504cb0-115c-4834-9c72-a8da2f02c44e",
     "format_id": "12",
@@ -649,6 +674,7 @@ const ALBUMS = [
   {
     "artist": "Joy Division",
     "album": "Unknown Pleasures",
+    "year": 1979,
     "release_group_mbid": "42352def-1aab-3000-b548-895ebd869cb6",
     "release_mbid": "c619a467-2f82-4618-9cc3-d5a0ce917756",
     "format_id": "12",
@@ -681,6 +707,7 @@ const ALBUMS = [
   {
     "artist": "The Cure",
     "album": "Disintegration",
+    "year": 1989,
     "release_group_mbid": "494bf606-d2f7-36d0-8340-eadad8601d2b",
     "release_mbid": "0d529759-5b2d-4f4a-b56d-92e7050d2f3b",
     "format_id": "12",
@@ -703,6 +730,7 @@ const ALBUMS = [
   {
     "artist": "Bauhaus",
     "album": "The Sky's Gone Out",
+    "year": 1982,
     "release_group_mbid": "705c2c4b-cb73-39a0-9f15-7e83aedafe72",
     "release_mbid": "20f7a557-2674-4b34-be1d-f983711b0df8",
     "format_id": "12",
@@ -727,6 +755,7 @@ const ALBUMS = [
   {
     "artist": "Depeche Mode",
     "album": "Some Great Reward",
+    "year": 1984,
     "release_group_mbid": "b3100982-db15-3a4b-a3ed-363c91cb40de",
     "release_mbid": "049ce193-786c-4eff-9881-c67a79152790",
     "format_id": "12",
@@ -746,6 +775,7 @@ const ALBUMS = [
   {
     "artist": "The Smiths",
     "album": "The Queen Is Dead",
+    "year": 1986,
     "release_group_mbid": "d8dde278-482c-3cc8-a530-fea70476f3a5",
     "release_mbid": "68c1b202-c656-47d2-9af3-b2eb0d9382ad",
     "format_id": "12",
@@ -766,6 +796,7 @@ const ALBUMS = [
   {
     "artist": "R.E.M.",
     "album": "Murmur",
+    "year": 1983,
     "release_group_mbid": "de790d3d-a35c-364c-a8fb-adfb73084a45",
     "release_mbid": "1179e394-bd36-4e62-8e4d-7b14fa43be59",
     "format_id": "12",
@@ -788,6 +819,7 @@ const ALBUMS = [
   {
     "artist": "Violent Femmes",
     "album": "Violent Femmes",
+    "year": 1983,
     "release_group_mbid": "616a1d80-83d0-3234-bf71-fe3de8109f99",
     "release_mbid": "9afa664c-9829-43d9-89fd-ce698e6f9068",
     "format_id": "12",
@@ -810,6 +842,7 @@ const ALBUMS = [
   {
     "artist": "The Stone Roses",
     "album": "The Stone Roses",
+    "year": 1989,
     "release_group_mbid": "88b86fe0-26f5-3949-817a-8082145e704d",
     "release_mbid": "966d143c-d0f4-46fc-a265-e7394b04a7b9",
     "format_id": "12",
@@ -832,6 +865,7 @@ const ALBUMS = [
   {
     "artist": "Prince",
     "album": "Purple Rain",
+    "year": 1984,
     "release_group_mbid": "b93a7c47-a6d4-33f2-9034-53fdd991f4ba",
     "release_mbid": "2879244d-44bf-4f9a-8bec-d46ecb5a94ec",
     "format_id": "12",
@@ -851,6 +885,7 @@ const ALBUMS = [
   {
     "artist": "Kate Bush",
     "album": "Hounds of Love",
+    "year": 1985,
     "release_group_mbid": "017f2a37-a78f-3578-9611-fa40408e5d90",
     "release_mbid": "c27af415-85a8-4863-a044-3924f8385f6a",
     "format_id": "12",
@@ -873,6 +908,7 @@ const ALBUMS = [
   {
     "artist": "Peter Gabriel",
     "album": "So",
+    "year": 1986,
     "release_group_mbid": "be3cc3e7-bdb0-3c13-a60b-a985b30eb603",
     "release_mbid": "bbd3823e-ec48-426e-b5e1-a56308aabf88",
     "format_id": "12",
@@ -895,6 +931,7 @@ const ALBUMS = [
   {
     "artist": "The Police",
     "album": "Synchronicity",
+    "year": 1983,
     "release_group_mbid": "f6df6292-fd40-37c3-bd61-22c53abfe773",
     "release_mbid": "db76e2a3-101d-4b91-bd91-4130fae9ad53",
     "format_id": "12",
@@ -916,6 +953,7 @@ const ALBUMS = [
   {
     "artist": "U2",
     "album": "The Joshua Tree",
+    "year": 1987,
     "release_group_mbid": "6f3e9fa6-be7a-3de8-a2b2-2072ece8a54d",
     "release_mbid": "5853f9e0-f0f3-4299-9d13-e081486a33fe",
     "format_id": "12",
@@ -937,6 +975,7 @@ const ALBUMS = [
   {
     "artist": "Pixies",
     "album": "Doolittle",
+    "year": 1989,
     "release_group_mbid": "1aa41b19-5a72-341b-bd91-4cf61d1dab6b",
     "release_mbid": "4e33feaa-e17f-4816-afa8-9b8ef52b6052",
     "format_id": "12",
@@ -962,6 +1001,7 @@ const ALBUMS = [
   {
     "artist": "Nirvana",
     "album": "Nevermind",
+    "year": 1991,
     "release_group_mbid": "1b022e01-4da6-387b-8658-8678046e4cef",
     "release_mbid": "3bf3b8f8-0b27-4950-8832-70adf39fab6e",
     "format_id": "12",
@@ -994,6 +1034,7 @@ const ALBUMS = [
   {
     "artist": "Pearl Jam",
     "album": "Ten",
+    "year": 1991,
     "release_group_mbid": "cea5d18a-1924-3cda-bebc-38933834b25d",
     "release_mbid": "1989eada-2c3c-454f-b6fe-16b1ac05cc45",
     "format_id": "12",
@@ -1021,6 +1062,7 @@ const ALBUMS = [
   {
     "artist": "Radiohead",
     "album": "OK Computer",
+    "year": 1997,
     "release_group_mbid": "b1392450-e666-3926-a536-22c65f834433",
     "release_mbid": "30702389-5c67-4438-9ea0-2351c8de0f1d",
     "format_id": "12",
@@ -1043,6 +1085,7 @@ const ALBUMS = [
   {
     "artist": "Oasis",
     "album": "(What's the Story) Morning Glory?",
+    "year": 1995,
     "release_group_mbid": "cc7e6348-cc55-31fa-aeb2-748a46a81cb3",
     "release_mbid": "d4071e67-73d8-4b44-9d51-df28aaff6568",
     "format_id": "12",
@@ -1065,6 +1108,7 @@ const ALBUMS = [
   {
     "artist": "Blur",
     "album": "Parklife",
+    "year": 1994,
     "release_group_mbid": "67461c8e-d864-3910-9bf4-39e44357aac9",
     "release_mbid": "9b2eee4e-af1d-4d5b-9616-f2e5964cf1fa",
     "format_id": "12",
@@ -1091,6 +1135,7 @@ const ALBUMS = [
   {
     "artist": "Pulp",
     "album": "Different Class",
+    "year": 1995,
     "release_group_mbid": "88f69eab-8f07-343b-847c-b944ad33dfcf",
     "release_mbid": "ad7c1695-acf8-423c-81ac-9e107d97e11c",
     "format_id": "12",
@@ -1113,6 +1158,7 @@ const ALBUMS = [
   {
     "artist": "The Strokes",
     "album": "Is This It",
+    "year": 2001,
     "release_group_mbid": "efea26d1-a016-30f6-b8e2-bc8c02336b0a",
     "release_mbid": "5fd728bf-f69a-4c45-b68a-4fb30898bb00",
     "format_id": "12",
@@ -1134,6 +1180,7 @@ const ALBUMS = [
   {
     "artist": "Arcade Fire",
     "album": "Funeral",
+    "year": 2004,
     "release_group_mbid": "05affa96-5959-32da-8d75-1c9eb985ca59",
     "release_mbid": "58c07638-4343-4ad7-ac37-da79f6aeb8e1",
     "format_id": "12",
@@ -1154,6 +1201,7 @@ const ALBUMS = [
   {
     "artist": "Amy Winehouse",
     "album": "Back to Black",
+    "year": 2006,
     "release_group_mbid": "6eac2e57-ee50-36f8-b0c4-c4c847a2c098",
     "release_mbid": "ccf4da26-ea82-462f-b753-88bb976fd40e",
     "format_id": "12",
@@ -1175,6 +1223,7 @@ const ALBUMS = [
   {
     "artist": "Arctic Monkeys",
     "album": "Whatever People Say I Am, That's What I'm Not",
+    "year": 2006,
     "release_group_mbid": "6c9c4985-3628-3070-b956-b538f30c9bea",
     "release_mbid": "ac78a3f7-252f-332f-8d8f-a1f15564ce0b",
     "format_id": "12",
