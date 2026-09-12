@@ -21,6 +21,9 @@ const scoreDisplay = document.getElementById("score");
 const choicesContainer = document.getElementById("choices");
 const roundLabel = document.getElementById("round-label");
 const questionLabel = document.getElementById("question-label");
+const timelineActions = document.getElementById("timeline-actions");
+const deselectButton = document.getElementById("deselect");
+const submitOrderButton = document.getElementById("submit-order");
 
 function shuffle(array) {
     const copy = [...array];
@@ -156,8 +159,26 @@ function chooseTimelineAlbum(button) {
     timelinePicks.push(Number(button.dataset.index));
     button.classList.add("timeline-selected");
     button.textContent = `${timelinePicks.length}. ${button.dataset.label}`;
+    deselectButton.disabled = false;
+    submitOrderButton.disabled = timelinePicks.length < timelineAlbums.length;
+}
 
-    if (timelinePicks.length < timelineAlbums.length) return;
+function deselectLastTimelineAlbum() {
+    if (answered || timelinePicks.length === 0) return;
+
+    const removedIndex = timelinePicks.pop();
+    const button = choicesContainer.querySelector(`[data-index="${removedIndex}"]`);
+    if (button) {
+        button.classList.remove("timeline-selected");
+        button.textContent = button.dataset.label;
+    }
+
+    deselectButton.disabled = timelinePicks.length === 0;
+    submitOrderButton.disabled = true;
+}
+
+function submitTimelineOrder() {
+    if (answered || timelinePicks.length < timelineAlbums.length) return;
 
     answered = true;
     rounds++;
@@ -171,6 +192,8 @@ function chooseTimelineAlbum(button) {
     choicesContainer.querySelectorAll(".choice").forEach(choice => {
         choice.disabled = true;
     });
+    deselectButton.disabled = true;
+    submitOrderButton.disabled = true;
 
     const timeline = correctOrder
         .map(item => `${item.album.album} (${item.album.year})`)
@@ -286,6 +309,7 @@ function renderIntruderRound() {
     artistDisplay.textContent = currentAlbum.artist;
     yearDisplay.textContent = currentAlbum.year || "";
     result.textContent = "";
+    timelineActions.classList.add("hidden");
     nextButton.classList.add("hidden");
     renderChoices(currentAlbum);
 }
@@ -309,6 +333,9 @@ function renderTimelineRound() {
     artistDisplay.textContent = "";
     yearDisplay.textContent = "";
     result.textContent = "";
+    timelineActions.classList.remove("hidden");
+    deselectButton.disabled = true;
+    submitOrderButton.disabled = true;
     nextButton.classList.add("hidden");
     renderTimelineChoices();
 }
@@ -325,9 +352,13 @@ function renderOpeningTrackRound() {
     artistDisplay.textContent = currentAlbum.artist;
     yearDisplay.textContent = currentAlbum.year;
     result.textContent = "";
+    timelineActions.classList.add("hidden");
     nextButton.classList.add("hidden");
     renderOpeningTrackChoices(currentAlbum);
 }
+
+deselectButton.addEventListener("click", deselectLastTimelineAlbum);
+submitOrderButton.addEventListener("click", submitTimelineOrder);
 
 nextButton.addEventListener("click", () => {
     if (gameOver) {
