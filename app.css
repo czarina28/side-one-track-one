@@ -163,6 +163,38 @@ h2 {
     color: var(--orange);
 }
 
+.timeline-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.timeline-actions.hidden {
+    display: none;
+}
+
+.timeline-action {
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .8px;
+    cursor: pointer;
+}
+
+.timeline-submit {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+.timeline-action:disabled {
+    opacity: .35;
+    cursor: default;
+}
+
 .result {
     min-height: 20px;
     margin-top: 10px;
