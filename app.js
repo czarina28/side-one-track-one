@@ -304,7 +304,7 @@ function renderIntruderRound() {
 
     currentAlbum = albumDeck.pop();
     roundLabel.textContent = "ALBUM · FIND THE INTRUDER";
-    questionLabel.textContent = "WHICH SONG WASN'T ON THIS ALBUM?";
+    questionLabel.innerHTML = 'WHICH SONG <span class="question-emphasis">WASN\'T</span> ON THIS ALBUM?';
     albumTitle.textContent = currentAlbum.album;
     artistDisplay.textContent = currentAlbum.artist;
     yearDisplay.textContent = currentAlbum.year || "";
