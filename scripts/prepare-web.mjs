@@ -7,6 +7,7 @@ const webDir = join(projectRoot, "www");
 
 await rm(webDir, { recursive: true, force: true });
 await mkdir(join(webDir, "data"), { recursive: true });
+await mkdir(join(webDir, "assets"), { recursive: true });
 
 for (const file of ["index.html", "app.css", "app.js"]) {
   await cp(join(projectRoot, file), join(webDir, file));
@@ -15,6 +16,11 @@ for (const file of ["index.html", "app.css", "app.js"]) {
 await cp(
   join(projectRoot, "data", "albums.js"),
   join(webDir, "data", "albums.js")
+);
+
+await cp(
+  join(projectRoot, "assets", "track-record-app-icon.png"),
+  join(webDir, "assets", "track-record-app-icon.png")
 );
 
 console.log("Prepared clean Capacitor web bundle in www/");

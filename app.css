@@ -46,6 +46,22 @@ header {
     padding-bottom: 13px;
 }
 
+.brand-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.app-logo {
+    width: 82px;
+    height: 82px;
+    flex: 0 0 auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
 h1 {
     margin: 0;
     font-size: clamp(38px, 10vw, 58px);
