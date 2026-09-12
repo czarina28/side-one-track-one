@@ -2,6 +2,7 @@ let currentAlbum = null;
 let answered = false;
 let score = 0;
 let rounds = 0;
+let albumDeck = [];
 
 const albumTitle = document.getElementById("album");
 const artistDisplay = document.getElementById("artist");
@@ -110,13 +111,18 @@ function updateScore() {
 
 function newAlbum() {
     answered = false;
-    let nextAlbum;
 
-    do {
-        nextAlbum = ALBUMS[Math.floor(Math.random() * ALBUMS.length)];
-    } while (ALBUMS.length > 1 && nextAlbum === currentAlbum);
+    if (albumDeck.length === 0) {
+        albumDeck = shuffle(ALBUMS);
 
-    currentAlbum = nextAlbum;
+        // When a fresh deck begins, avoid dealing the previous album again.
+        if (albumDeck.length > 1 && albumDeck[albumDeck.length - 1] === currentAlbum) {
+            [albumDeck[0], albumDeck[albumDeck.length - 1]] =
+                [albumDeck[albumDeck.length - 1], albumDeck[0]];
+        }
+    }
+
+    currentAlbum = albumDeck.pop();
     albumTitle.textContent = currentAlbum.album;
     artistDisplay.textContent = currentAlbum.artist;
     yearDisplay.textContent = currentAlbum.year || "";
