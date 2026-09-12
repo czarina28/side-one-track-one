@@ -1,0 +1,8 @@
+{
+  "appId": "com.mariaworld.trackrecord",
+  "appName": "Track Record",
+  "webDir": "www",
+  "ios": {
+    "contentInset": "automatic"
+  }
+}
